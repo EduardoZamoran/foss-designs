@@ -1,0 +1,59 @@
+# ===== Generado por simulación/síntesis (regla principal) =====
+build/
+obj_dir/
+
+# ===== Simulación (por si se ejecuta fuera de build/) =====
+*.vcd
+*.fst
+*.fsdb
+*.vvp
+*.out
+*.log
+*.jou
+*.wlf
+
+# ===== OpenLane / OpenROAD / ORFS =====
+runs/
+*.odb
+*.gds
+*.oas
+
+# ===== Vivado =====
+xsim.dir/
+*.runs/
+*.cache/
+*.hw/
+*.sim/
+*.ip_user_files/
+*.gen/
+.Xil/
+*.str
+*.backup.*
+*.wdb
+webtalk*
+
+# ===== Quartus =====
+db/
+incremental_db/
+output_files/
+*.qws
+*.sof
+*.pof
+*.jdi
+*.sld
+*.done
+
+# ===== Bitstreams (van en GitHub Releases, no en el repo) =====
+*.bit
+*.rbf
+
+# ===== Editores / SO / Python =====
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+.venv/
