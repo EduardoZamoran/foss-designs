@@ -1,0 +1,5 @@
+read_verilog -sv ../rtl/Full_Adder.sv
+read_verilog -sv ../rtl/Full_Adder_8b.sv
+hierarchy -check -top FA_8bits
+proc; fsm; memory
+show -format svg -prefix Full_Adder_8b FA_8bits

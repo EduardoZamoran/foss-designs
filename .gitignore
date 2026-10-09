@@ -2,7 +2,7 @@
 build/
 obj_dir/
 
-# ===== Simulación (por si se ejecuta fuera de build/) =====
+# ===== Simulación (Icarus / GTKWave / Verilator) =====
 *.vcd
 *.fst
 *.fsdb
@@ -11,6 +11,21 @@ obj_dir/
 *.log
 *.jou
 *.wlf
+*.gtkw.bak
+*.vcd.idx
+
+# ===== Yosys / Slang / Graphviz =====
+*.dot
+yosys_run.ys
+run_slang_temp.ys
+*.ys.log
+
+# ===== Siemens Questa / ModelSim =====
+work/
+transcript
+vsim.wlf
+*.mti
+*.mpf
 
 # ===== OpenLane / OpenROAD / ORFS =====
 runs/
@@ -43,11 +58,17 @@ output_files/
 *.sld
 *.done
 
+# ===== KiCad =====
+*-backups/
+*.kicad_prl
+*.lck
+fp-info-cache
+
 # ===== Bitstreams (van en GitHub Releases, no en el repo) =====
 *.bit
 *.rbf
 
-# ===== Editores / SO / Python =====
+# ===== Editores / SO / Python / C++ =====
 .vscode/
 .idea/
 *.swp
@@ -57,3 +78,4 @@ Thumbs.db
 __pycache__/
 *.pyc
 .venv/
+*.o

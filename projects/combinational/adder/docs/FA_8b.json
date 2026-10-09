@@ -1,0 +1,624 @@
+{
+  "creator": "Yosys 0.68 (git sha1 38e001a6f, Release, GNU /usr/bin/c++ 13.3.0)",
+  "modules": {
+    "FA": {
+      "attributes": {
+        "blackbox": "1",
+        "src": "../rtl/Full_Adder.sv:12.8"
+      },
+      "ports": {
+        "A": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "B": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "C": {
+          "direction": "output",
+          "bits": [ 4 ]
+        },
+        "Cin": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "Cout": {
+          "direction": "output",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+        "$0": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../rtl/Full_Adder.sv:18.16-18.21"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 3 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$1": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../rtl/Full_Adder.sv:18.16-18.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 5 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$2": {
+          "hide_name": 1,
+          "type": "$buf",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "Y": [ 4 ]
+          }
+        },
+        "$3": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../rtl/Full_Adder.sv:19.20-19.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 3 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$4": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../rtl/Full_Adder.sv:19.30-19.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 5 ],
+            "Y": [ 10 ]
+          }
+        },
+        "$5": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../rtl/Full_Adder.sv:19.19-19.38"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 10 ],
+            "Y": [ 11 ]
+          }
+        },
+        "$6": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../rtl/Full_Adder.sv:19.42-19.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 5 ],
+            "Y": [ 12 ]
+          }
+        },
+        "$7": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../rtl/Full_Adder.sv:19.19-19.50"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 12 ],
+            "Y": [ 13 ]
+          }
+        },
+        "$8": {
+          "hide_name": 1,
+          "type": "$buf",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "Y": [ 6 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0y": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+          }
+        },
+        "$1y": {
+          "hide_name": 1,
+          "bits": [ 8 ],
+          "attributes": {
+          }
+        },
+        "$3y": {
+          "hide_name": 1,
+          "bits": [ 9 ],
+          "attributes": {
+          }
+        },
+        "$4y": {
+          "hide_name": 1,
+          "bits": [ 10 ],
+          "attributes": {
+          }
+        },
+        "$5y": {
+          "hide_name": 1,
+          "bits": [ 11 ],
+          "attributes": {
+          }
+        },
+        "$6y": {
+          "hide_name": 1,
+          "bits": [ 12 ],
+          "attributes": {
+          }
+        },
+        "$7y": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+          }
+        },
+        "A": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "A"
+          }
+        },
+        "B": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "B"
+          }
+        },
+        "C": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "hdlname": "C"
+          }
+        },
+        "Cin": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "hdlname": "Cin"
+          }
+        },
+        "Cout": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "hdlname": "Cout"
+          }
+        }
+      }
+    },
+    "FA_8bits": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "../rtl/Full_Adder_8b.sv:6.8"
+      },
+      "ports": {
+        "A": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ]
+        },
+        "B": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "C": {
+          "direction": "output",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ]
+        },
+        "Cin": {
+          "direction": "input",
+          "bits": [ 26 ]
+        },
+        "Cout": {
+          "direction": "output",
+          "bits": [ 27 ]
+        }
+      },
+      "cells": {
+        "U1": {
+          "hide_name": 0,
+          "type": "FA",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "U1",
+            "src": "../rtl/Full_Adder_8b.sv:17.8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "output",
+            "Cin": "input",
+            "Cout": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 10 ],
+            "C": [ 18 ],
+            "Cin": [ 26 ],
+            "Cout": [ 28 ]
+          }
+        },
+        "U2": {
+          "hide_name": 0,
+          "type": "FA",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "U2",
+            "src": "../rtl/Full_Adder_8b.sv:18.8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "output",
+            "Cin": "input",
+            "Cout": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 11 ],
+            "C": [ 19 ],
+            "Cin": [ 28 ],
+            "Cout": [ 29 ]
+          }
+        },
+        "U3": {
+          "hide_name": 0,
+          "type": "FA",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "U3",
+            "src": "../rtl/Full_Adder_8b.sv:19.8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "output",
+            "Cin": "input",
+            "Cout": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 12 ],
+            "C": [ 20 ],
+            "Cin": [ 29 ],
+            "Cout": [ 30 ]
+          }
+        },
+        "U4": {
+          "hide_name": 0,
+          "type": "FA",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "U4",
+            "src": "../rtl/Full_Adder_8b.sv:20.8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "output",
+            "Cin": "input",
+            "Cout": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 13 ],
+            "C": [ 21 ],
+            "Cin": [ 30 ],
+            "Cout": [ 31 ]
+          }
+        },
+        "U5": {
+          "hide_name": 0,
+          "type": "FA",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "U5",
+            "src": "../rtl/Full_Adder_8b.sv:21.8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "output",
+            "Cin": "input",
+            "Cout": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 14 ],
+            "C": [ 22 ],
+            "Cin": [ 31 ],
+            "Cout": [ 32 ]
+          }
+        },
+        "U6": {
+          "hide_name": 0,
+          "type": "FA",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "U6",
+            "src": "../rtl/Full_Adder_8b.sv:22.8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "output",
+            "Cin": "input",
+            "Cout": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 15 ],
+            "C": [ 23 ],
+            "Cin": [ 32 ],
+            "Cout": [ 33 ]
+          }
+        },
+        "U7": {
+          "hide_name": 0,
+          "type": "FA",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "U7",
+            "src": "../rtl/Full_Adder_8b.sv:23.8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "output",
+            "Cin": "input",
+            "Cout": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 16 ],
+            "C": [ 24 ],
+            "Cin": [ 33 ],
+            "Cout": [ 34 ]
+          }
+        },
+        "U8": {
+          "hide_name": 0,
+          "type": "FA",
+          "parameters": {
+          },
+          "attributes": {
+            "hdlname": "U8",
+            "src": "../rtl/Full_Adder_8b.sv:24.8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "output",
+            "Cin": "input",
+            "Cout": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 17 ],
+            "C": [ 25 ],
+            "Cin": [ 34 ],
+            "Cout": [ 27 ]
+          }
+        }
+      },
+      "netnames": {
+        "A": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+          "attributes": {
+            "hdlname": "A"
+          }
+        },
+        "B": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "hdlname": "B"
+          }
+        },
+        "C": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "attributes": {
+            "hdlname": "C"
+          }
+        },
+        "Cin": {
+          "hide_name": 0,
+          "bits": [ 26 ],
+          "attributes": {
+            "hdlname": "Cin"
+          }
+        },
+        "Cout": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "hdlname": "Cout"
+          }
+        },
+        "c1": {
+          "hide_name": 0,
+          "bits": [ 28 ],
+          "attributes": {
+            "hdlname": "c1"
+          }
+        },
+        "c2": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "hdlname": "c2"
+          }
+        },
+        "c3": {
+          "hide_name": 0,
+          "bits": [ 30 ],
+          "attributes": {
+            "hdlname": "c3"
+          }
+        },
+        "c4": {
+          "hide_name": 0,
+          "bits": [ 31 ],
+          "attributes": {
+            "hdlname": "c4"
+          }
+        },
+        "c5": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "hdlname": "c5"
+          }
+        },
+        "c6": {
+          "hide_name": 0,
+          "bits": [ 33 ],
+          "attributes": {
+            "hdlname": "c6"
+          }
+        },
+        "c7": {
+          "hide_name": 0,
+          "bits": [ 34 ],
+          "attributes": {
+            "hdlname": "c7"
+          }
+        }
+      }
+    }
+  }
+}

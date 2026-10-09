@@ -1,0 +1,5 @@
+read_slang ../rtl/Full_Adder.sv
+read_slang ../rtl/Full_Adder_8b.sv
+hierarchy -check -top FA_8bits
+proc
+write_json FA_8b.json

@@ -7,6 +7,8 @@
 // Entradas wire usualmente.
 // Logic puede ser wire o reg.
 
+(*blackbox*)
+
 module FA (
     input A, B, Cin,
     output logic C, 
