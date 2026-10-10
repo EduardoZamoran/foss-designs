@@ -3,8 +3,6 @@
     Sep, 23th. 2026
 */
 
-(* blackbox *)
-
 module FS (
     input A, B, Bi,
     output logic S, 

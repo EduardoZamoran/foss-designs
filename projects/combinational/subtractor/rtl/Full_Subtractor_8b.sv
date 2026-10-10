@@ -3,8 +3,6 @@
     Sep 23th, 2026.
 */
 
-(* blackbox *)
-
 module FS_8b (
     input logic [7:0] A, B,
     input logic Bi,

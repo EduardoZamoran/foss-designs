@@ -1,16 +1,18 @@
-# sintesis.ys
+# synthesis.ys
+read_verilog -sv ../rtl/Full_Subtractor.sv
 read_verilog -sv ../rtl/Full_Subtractor_8b.sv
-hierarchy -top FS_8b
+
+hierarchy -check -top FS_8b
 proc
 flatten
 opt
-fsm
-opt
 techmap
 opt
-write_verilog netlist_generic.v
+
+write_verilog -noattr netlist_generic.v
 
 abc -liberty /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-opt
+opt_clean
+
 stat -liberty /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-write_verilog FS_8b_nl_final.v
+write_verilog -noattr FS_8b_nl_final.v
